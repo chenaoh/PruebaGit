@@ -6,6 +6,7 @@ public class Aplicacion {
 		// TODO Auto-generated method stub
 		JOptionPane.showMessageDialog(null,"Henao");
 		System.out.println("Este es un nuevo cambio, diferente, otro cambio");
+		System.out.println("Mas cambios!");
 	}
 
 }
