@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+<h:head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta http-equiv="X-UA-Conpatible" content="IE=edge"/>
+	<h:outputStylesheet library="css" name="flexboxgrid2.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="font-awesome.css"></h:outputStylesheet>
+	<title>Ejemplo HTML5</title>
+</h:head>
+<body>
+<f:view>
+	<div class="row">
+		<div class="col-xs-12 cuadro1">
+			<label class="titulo"><h1>Sound Vision 4k</h1></label>
+		</div>
+			
+		<div class=" cuadro2 col-sm-12">
+			<div class="row ">
+			<a class=" col-md-3 col-sm-3 enlace home" href=""><i class="fa fa-home"></i></a>
+			<a class="enlace  col-md-3 col-sm-3" href=""><i class="fa fa-user"></i></a>
+			<a class="enlace  col-md-3 col-sm-3" href=""><i class="fa fa-comment"></i></a>
+			<a class="enlace col-md-3 col-sm-3 noti" href=""><i class="fa fa-bell"></i></a>
+			</div>
+		</div>
+		
+		<div class="col-xs-12 cuadro7">
+			<select name="select" class="seleccion">
+			  <option value="Audiovisual 1">Audiovisual 1</option> 
+			  <option value="Audiovisual 2">Audiovisual 2</option>
+			  <option value="Auditorio">Auditorio</option>
+			</select>
+			
+		</div>
+		<div class="col-xs-12">
+		<input type="date" class="datepicker" jsf:value="#{reserva.fecha}"></div>
+		</div>
+		<div class="col-xs-12">
+		<h:commandButton action="index2.xhtml">Siguiente</h:commandButton>
+		</div>
+	<h:outputStylesheet library="js" name="jquery.js"></h:outputStylesheet>
+    <h:outputStylesheet library="js" name="materialize.js"></h:outputStylesheet>
+	
+
+    
+	
+	<script type="text/javascript">
+
+		$('.timepicker').pickatime({
+	    default: 'now', // Set default time: 'now', '1:30AM', '16:30'
+	    fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+	    twelvehour: false, // Use AM/PM or 24-hour format
+	    donetext: 'OK', // text for done-button
+	    cleartext: 'Clear', // text for clear-button
+	    canceltext: 'Cancel', // Text for cancel-button
+	    autoclose: false, // automatic close timepicker
+	    ampmclickable: true, // make AM PM clickable
+	    aftershow: function(){} //Function for after opening timepicker
+	    });
+
+		$(document).ready(function() {
+			$('.datepicker').pickadate({
+		    selectMonths: true, // Creates a dropdown to control month
+		    selectYears: 15, // Creates a dropdown of 15 years to control year,
+		    today: 'Today',
+		    clear: 'Clear',
+		    close: 'Ok',
+		    closeOnSelect: true // Close upon selecting a date,
+		  });
+		});
+	    
+	</script>
+	</f:view>
+</body>
+</html>
